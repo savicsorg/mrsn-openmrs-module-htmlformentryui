@@ -36,13 +36,7 @@
 <% } %>
 
 <span id="form-actions" class="no-print">
-
-<% if (customPrintPageName == null || customPrintPageName.isEmpty()) { %>
-        <a class="button" id="print-button" href="javascript:window.print()">
-<% } else { %>
-        <a class="button" id="print-button" href="${ui.pageLink(customPrintProvider, customPrintPageName, [encounterUuid: encounter.uuid, contentDisposition: 'inline'])}" target="${customPrintTarget}">
-<% } %>
-
+    <a class="button" id="print-button" href="javascript:window.print()">
         <i class="icon-print"></i>
         ${ ui.message("uicommons.print") }
     </a>
